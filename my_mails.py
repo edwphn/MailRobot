@@ -1,5 +1,6 @@
 """Import modules"""
 import os
+import sys
 from typing import Union
 
 import smtplib
