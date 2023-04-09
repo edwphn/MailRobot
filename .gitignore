@@ -1,0 +1,7 @@
+.venv
+*.log
+TEMP/*
+config.ini
+__pycache__
+Junk files
+test.py

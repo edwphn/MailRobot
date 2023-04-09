@@ -1,0 +1,33 @@
+Dear Customer,
+
+We would like to inform you that we have claims against your company,
+which have not yet been paid and are overdue as of today.
+
+These documents are: {}
+
+For the total amount: {} Euro
+
+We believe that this has happened inadvertently, but please check and pay
+them to our bank account as soon as possible, or when they will be paid.
+If the claims have already been paid, please provide us with the information,
+when and how the payments were made so that we can check - ideally by
+sending us a confirmation of the transaction.
+
+Failure to pay invoices when they are due puts you at risk of suspension
+delivery of further goods and services and the payment of interest on
+overdue invoices.
+
+If you are unsure, please contact our sales department at
++420 777 889 869 or write to fakturace@frpneu.cz
+
+
+Thank you for your consideration,
+
+kind regards
+
+
+FLEKC s.r.o.
+Dany Medřické 1001,
+252 64 Velké Přílepy
+ID: 27458920
+VAT: CZ27458920

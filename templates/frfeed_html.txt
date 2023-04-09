@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style type="text/css">
+            * {{
+                font-size: 11pt;
+                font-family: Calibri;
+                color: #222;
+            }}
+            table {{
+                border-collapse: collapse;
+                border: 1px solid #ccc;
+            }}
+            thead * {{
+                font-weight: 700;
+            }}
+            thead tr th {{
+                padding: 0.25em 0.3em;
+            }}
+            tbody tr th {{
+                font-weight: 400;
+                color: #888;
+            }}
+            td {{
+                max-width: 20em;
+                padding: 0.25em 0.3em;
+                vertical-align: middle;
+                overflow: hidden;
+                overflow-wrap: break-word;
+            }}
+        </style>
+    </head>
+    <body>
+        <p><span>Dear customer,</span></p>
+        <p><span>Thank you for placing your order(s) with FRpneu!</span></p>
+        <p><span>Attached, you will find today's new invoice(s) in PDF format according to your order(s).</span></p>
+        <p><span>Below, you can also find all the useful information, such as order number, invoice number, total price, and parcel number(s) for tracking with the carrier company.</span></p>
+<!-------------------------------------->
+{table}
+<!-------------------------------------->
+        <p><span>If you would notice missing data or any mistakes, be free to contact us via our email: info@frpneu.cz</span></p>    
+        <p><span>We are looking forward to your next order.</span></p>
+        <p><span>Thank you. </span></p>
+        <p><span>Best regards, </span></p>
+        <p><span>FRpneu team</span></p>
+    </body>
+</html>
