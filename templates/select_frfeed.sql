@@ -24,9 +24,8 @@ SELECT
 FROM FA
 WHERE   FA.RefStr = 38
         AND FA.RelTpFak = 1
-        -- AND CAST(FA.DatCreate AS DATE) = CAST(GETDATE() AS DATE)
-        AND FA.Datum = '2023-03-03'
+        AND CAST(FA.Datum AS DATE) = CAST(GETDATE() AS DATE)
+        -- AND FA.Datum = '2023-04-06'
         AND FA.Email LIKE '%@%'
-        -- AND (FA.Email LIKE '%TECH@FRPNE%' OR FA.Email LIKE '%SALES@FRPNE%' OR FA.Email LIKE 'EDPS.M%')
 
 -- ORDER BY Email

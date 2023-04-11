@@ -130,7 +130,7 @@ def main():
                 for email, inv_data in details.items():
                     email_count += 1
                     with logger.contextualize(tag='report'):
-                        logger.info(f'Processing email №{email_count}')
+                        logger.info(f'Zpracovávám email №{email_count}')
                     overdue_mail = my_mails.ReminderOverdue(mail_smtp)
                     overdue_mail.send_message(email, currency, inv_data['total_amount'], inv_data['invoices'])
 
