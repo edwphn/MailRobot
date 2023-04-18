@@ -5,3 +5,4 @@ TEMP/*
 config.ini
 __pycache__
 Junk files
+*.bat

@@ -122,7 +122,7 @@ def main():
 
         # Unpack data from dictionary and send email
         with logger.contextualize(tag='report'):
-            logger.info(f'Preparing emails to send at {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+            logger.info(f'Připravuji emaily k odeslání. Čas: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
 
         email_count = 0
         with MailSMTP() as mail_smtp:
