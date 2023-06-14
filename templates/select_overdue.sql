@@ -17,5 +17,6 @@ WHERE   FA.KcLikv > 0
         AND FA.RelForUh NOT IN (4, 17)
         AND FA.Email LIKE '%@%'
         AND FA.RelForUh NOT IN (5, 19, 21)
+        AND FA.Email NOT LIKE '%bestdrive.cz%'
         -- For testing purpose uncomment line bellow
         -- AND (FA.Email LIKE '%shop@md-tuning.de%' OR FA.Email LIKE '%SALES@FRPNE%' OR FA.Email LIKE 'EDPS.M%')
