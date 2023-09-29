@@ -25,6 +25,7 @@ import os
 import traceback
 import sys
 from log_sett import logger
+from typing import List
 from maintenance import get_filenames, init_maintenance
 from config_handler import config_vars, SCRIPT_DIR
 import CRM
@@ -51,7 +52,7 @@ files: dict = config_vars['files']
 # Maintenance
 init_maintenance()
 
-# Start main program depending on mode (arguement)
+# Start main program depending on mode (argument)
 def main():
     """Main function of the program"""
 
@@ -60,14 +61,14 @@ def main():
 
         # Get list of invoices, clients etc.
         query_path: str = os.path.join(SCRIPT_DIR, dirs['templates'], files['select_frfeed'])
-        raw_data: list = CRM.select_data(query_path)
+        raw_data: List[str] = CRM.select_data(query_path)
 
         # Check if there is something to process
         if not raw_data:
             logger.info('No data in CRM to process')
             raise SystemExit("No data in CRM to process")
 
-        # Download invoices from list but only invoice numbers that are not already downloaded
+        # Download invoices from the list but only invoice numbers that are not already downloaded
         logger.info('Collecting data to download')
         dl_data = [row[:3] for row in raw_data if row[1] not in get_filenames(dirs['TEMP'])]
         if len(dl_data) > 0:
@@ -75,11 +76,11 @@ def main():
         else:
             logger.info('Nothing new to download')
 
-        # Sort and group raw data into structured dictionary
+        # Sort and group raw data into a structured dictionary
         logger.info('Sort and group raw dataset')
         mail_dict: dict = raw2order.prepare_frfeed(raw_data)
 
-        # Unpack data from dictionary and send email
+        # Unpack data from the dictionary and send email
         with logger.contextualize(tag='report'):
             logger.info(f'Preparing {len(mail_dict)} emails')
             logger.info(f'At {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
@@ -99,9 +100,9 @@ def main():
     elif ARGUMENT == 'overdue':
         logger.info(f'Argument: {ARGUMENT}')
 
-        # Get list of invoices, clients etc.
+        # Get a list of invoices, clients etc.
         query_path: str = os.path.join(SCRIPT_DIR, dirs['templates'], files['select_ovedue'])
-        raw_data: list = CRM.select_data(query_path)
+        raw_data: List[str] = CRM.select_data(query_path)
 
         # Check if there is something to process
         if not raw_data:
